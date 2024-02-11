@@ -12,6 +12,22 @@
             <div class="gif_container">
                 <img src="https://i.pinimg.com/originals/86/14/ef/8614ef2079b8767a288487cbc56e202e.gif" alt="Cute animated illustration">
             </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">TAK!</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">ŃIE</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes1.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
         </div>
        
     </body> 
