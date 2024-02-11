@@ -9,12 +9,14 @@ body {
 #noButton {
     position: absolute;
     margin-left: 150px;
+    background-color: #AB0C0C;
 }
 
 #noButton1 {
     position: absolute;
     margin-left: 150px;
     transition: 0.5s;
+    background-color: #AB0C0C;
 }
 
 #yesButton {
