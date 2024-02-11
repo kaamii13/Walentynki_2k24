@@ -32,20 +32,23 @@
             flex-direction: column;
             font-family: sans-serif;
         }
-        .hearts{
-            font-size: 23 px;
-            font-weight: bold;
-            position: fixed;
-            top: -1vh;
-            transform: translateY(0%);
-            left: 0;
-            animation: fall 1s else-in infinite;
+                .hearts{
+              height: 20px;
+              width: 100px;
+              left: 100px;
+              position: fixed;
+              animation: move 1.5s forwards;
         }
-        @keyframes fall{
-            to{
-                transform: translateY(250vh);
-            }
-        }
+      
+      
+      @keyframes move {
+      from {
+        bottom: 100vh;
+      }
+      to {
+        bottom: 0;
+      }
+    }
     </style>
     
     <body>
