@@ -4,6 +4,36 @@
         <link rel="stylesheet" href="./yes_style.css">
         
     </head> 
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width:100%
+            height: 100vh;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-direction: column;
+            font-family: sans-serif;
+        }
+        .hearts{
+            font-size: 23 px;
+            font-weight: bold;
+            position: fixed;
+            top: -1vh;
+            transform: translateY(0%);
+            left: 0;
+            animation: fall 1s else-in infinite;
+        }
+        @keyframes fall{
+            to{
+                transform: translateY(250vh);
+            }
+        }
+    </style>
     <body>
         <div class="container">
             <div >
@@ -15,4 +45,29 @@
         </div>
        
     </body> 
+
+<script>
+    function hearts(){
+
+        const container = document.querySelector('.container');
+        const creat = document.createElement('div')
+        creat.classList.add('hearts');
+        creat.innerHTML = '💘';
+        cerat.style.left = Math.random() * 100 + 'vw';
+        creat.style.animationDuration = Math.random() * 2 + 2+ 's';
+        container.appendChild(creat)
+        setTimeout(() => {
+            creat.remove();
+        }, 3000);
+            
+
+
+    }
+    
+    hearts();       
+
+    setInterval(hearts, 100);
+    
+</script>    
+    
 </html>
