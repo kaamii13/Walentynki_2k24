@@ -14,18 +14,21 @@
                 <img src="https://i.pinimg.com/originals/36/a0/9e/36a09ebf177a55efc0af34e8d5cd0000.gif" alt="Cute animated illustration">
             </div>
             <div class = "buttons">
-                <button class="btn" id = "yesButton" onclick="nextPage1()">Yes</button>
-                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <button class="btn" id = "yesButton" onclick="nextPage1()">Tak</button>
+                <button class="btn" id = "noButton1" onclick="nextPage2()">Nie</button>
                 <script>
                     function nextPage1() {
                         window.location.href = "yes.html";
                     }
+                    function nextPage2() {
+                        window.location.href = "yes.html";
+                    }
                     
                     function moveButton() {
-                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
-                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
-                        document.getElementById('noButton').style.left = `${x}px`;
-                        document.getElementById('noButton').style.top = `${y}px`;
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton1').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton1').offsetHeight) - 48;
+                        document.getElementById('noButton1').style.left = `${x}px`;
+                        document.getElementById('noButton1').style.top = `${y}px`;
                     }
                 </script> 
             </div>
